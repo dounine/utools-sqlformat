@@ -1,3 +1,5 @@
+[](https://github.com/dounine/utools-sqlformat/blob/master/show.gif)
+
 ## SQL格式化
 > 这一个能将SQL进行格式化漂亮输出的工具、底层使用了AceEditor与Ant Design进行界面设计、sql-formatter作为格式输出工具。
 
