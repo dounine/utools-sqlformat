@@ -85,6 +85,7 @@ class App extends React.Component {
                         theme="textmate"
                         width={"100%"}
                         height={460}
+                        scrollMargin={[10]}
                         className={"sqlinput"}
                         onChange={this.changeSql}
                         showGutter={false}
