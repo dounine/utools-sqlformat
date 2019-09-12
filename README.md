@@ -33,6 +33,9 @@ yarn install #或者 npm install
 bash build.sh
 ```
 
+## 下载
+最新版本 [sqlformat.upx](https://github.com/dounine/utools-sqlformat/blob/master/version/sqlformat-0.0.1.upx?raw=true)
+
 
 
 
