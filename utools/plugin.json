@@ -1,0 +1,20 @@
+{
+  "pluginName": "sqlformat",
+  "description": "sql 格式化工具",
+  "author": "lake",
+  "homepage": "https://github.com/dounine",
+  "main": "index.html",
+  "logo": "logo.png",
+  "preload": "preload.js",
+  "version": "0.0.1",
+  "features": [
+    {
+      "code": "sql",
+      "cmds": [
+        "sql",
+        "format",
+        "格式化"
+      ]
+    }
+  ]
+}
