@@ -2,7 +2,7 @@
   "pluginName": "sqlformat",
   "description": "sql 格式化工具",
   "author": "lake",
-  "homepage": "https://github.com/dounine",
+  "homepage": "https://github.com/dounine/utools-sqlformat",
   "main": "index.html",
   "logo": "logo.png",
   "preload": "preload.js",
