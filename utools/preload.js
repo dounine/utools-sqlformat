@@ -2,8 +2,18 @@ const {readFileSync} = require('fs');
 var exec = require('child_process').exec;
 const clipboard = require('electron').clipboard;
 utools.onPluginReady(() => {
-    if(window.ready){
+    if (window.ready) {
         window.ready()
+    }
+});
+utools.onPluginEnter(({code, type, payload}) => {
+    console.log('用户进入插件', code, type, payload);
+    if (window.onPluginEnter) {
+        window.onPluginEnter({
+            code,
+            type,
+            payload
+        })
     }
 });
 window.cache_get = function (key) {

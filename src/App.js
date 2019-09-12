@@ -21,7 +21,9 @@ class App extends React.Component {
     changeSql = (value) => {
         let self = this;
         if (self.state.type === 'origin') {
-            self.setState({value})
+            self.setState({
+                value
+            })
         }
     };
 
@@ -45,11 +47,21 @@ class App extends React.Component {
     };
 
     componentDidMount() {
+        let self = this;
+        window.onPluginEnter = function ({code, type, payload}) {
+            if (self.state.value !== payload) {
+                self.setState({
+                    value: payload,
+                    type: 'format',
+                    format: sqlFormatter.format(payload)
+                })
+            }
+        };
         window.ready = function () {
             let tip = window.cache_get('tip');
             console.log('读取cache', tip);
             if (tip.data !== null) {
-                this.setState({
+                self.setState({
                     tip: tip.data
                 })
             }
@@ -93,9 +105,6 @@ class App extends React.Component {
                         fontSize={18}
                         focus={true}
                         highlightActiveLine={false}
-                        editorProps={{
-                            $blockScrolling: true,
-                        }}
                         commands={[{
                             name: 'formatter',
                             bindKey: {win: 'Ctrl-Enter', mac: 'Command-Enter'},
