@@ -10,6 +10,7 @@
   "features": [
     {
       "code": "sql",
+      "explain": "sql格式化",
       "cmds": [
         "sql",
         "format",
